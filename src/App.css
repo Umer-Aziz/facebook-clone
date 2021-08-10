@@ -2,3 +2,10 @@
     --facebook-color:#2e81f4;
     --backColor:#eff2f5;
 }
+body{
+    background-color: #f1f2f5;
+    
+}
+.app_body{
+    display: flex;
+}
