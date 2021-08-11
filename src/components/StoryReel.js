@@ -1,13 +1,17 @@
 import React from 'react'
 import "../StoryReel.css"
 import Story from  "./Story.js"
+import { useStateValue } from '../StateProvider'
 
 const StoryReel = () => {
+       const [{ user }, dispatch ] = useStateValue();
+
     return (
         <div className="storyReel">
-            <Story image="https://scontent.fisb7-1.fna.fbcdn.net/v/t1.6435-9/141637808_462628454869616_8734221659097679404_n.jpg?_nc_cat=101&ccb=1-4&_nc_sid=e3f864&_nc_ohc=GI8ERzgizIcAX_NmYcb&_nc_ht=scontent.fisb7-1.fna&oh=d657037beef6a9122676e63d6f6f06e7&oe=613831B2"
-                   ProfileImg="https://scontent.fisb7-1.fna.fbcdn.net/v/t1.6435-1/cp0/p80x80/175130995_514546996344428_417440514175018136_n.jpg?_nc_cat=108&ccb=1-4&_nc_sid=7206a8&_nc_ohc=acXCNKA2xBMAX_UpLi1&_nc_ht=scontent.fisb7-1.fna&oh=0c01ed5506aec2f93037086e0f089436&oe=61337DFC"
-                   title="Umer Aziz"
+            <Story 
+                   image="https://source.unsplash.com/random"
+                   ProfileImg={user.photoURL}
+                   title={user.displayName}
             />
             <Story image="https://scontent.fisb7-1.fna.fbcdn.net/v/t1.6435-9/214331854_1287798551622876_2554898988791718036_n.jpg?_nc_cat=104&ccb=1-4&_nc_sid=730e14&_nc_ohc=etGQo1oAY5MAX8I-3pU&_nc_ht=scontent.fisb7-1.fna&oh=3e0d876b646ca824fba7a54bf8ed6cb5&oe=61387FFE"
                    ProfileImg="https://scontent.fisb7-1.fna.fbcdn.net/v/t31.18172-1/cp0/p60x60/15289248_269068140162594_1580546814749307408_o.png?_nc_cat=109&ccb=1-4&_nc_sid=1eb0c7&_nc_ohc=6ZS9T0kpMSsAX_6z6aW&_nc_ht=scontent.fisb7-1.fna&oh=00311e99e66960b100645b269ad36b6d&oe=6138059A"
